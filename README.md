@@ -1,29 +1,29 @@
 # Image Classification Exploratory Data Analysis Summary
 <p align="center">
     <!--MATPLOTLIB-->
-      <img src="matplotlib_logo.png"  width=15% alt="Matplotlib">
+      <img src="Images\matplotlib_logo.png"  width=15% alt="Matplotlib">
    <!--PLUS SIGN-->
-          <img src="plus_sign.svg" width=7% alt="Plus">
+          <img src="Images\plus_sign.svg" width=7% alt="Plus">
     <!--PANDAS-->
-      <img src="Pandas_logo.svg.png"  width=15% alt="Pandas">
+      <img src="Images\Pandas_logo.svg.png"  width=15% alt="Pandas">
    <!--PLUS SIGN-->
-          <img src="plus_sign.svg" width=7% alt="Plus">
+          <img src="Images\plus_sign.svg" width=7% alt="Plus">
     <!--OPENCV-->
-      <img src="OpenCV_Logo_with_text_svg_version.svg.png"  width=5% alt="OpenCV">
+      <img src="Images\OpenCV_Logo_with_text_svg_version.svg.png"  width=5% alt="OpenCV">
    <!--PLUS SIGN-->
-          <img src="plus_sign.svg" width=7% alt="Plus">
+          <img src="Images\plus_sign.svg" width=7% alt="Plus">
      <!--NUMPY-->
-          <img src="NumPy_logo_2020.svg.png" width=10% alt="Numpy">
+          <img src="Images\NumPy_logo_2020.svg.png" width=10% alt="Numpy">
    <!--PLUS SIGN-->
-          <img src="plus_sign.svg" width=7% alt="Plus">
+          <img src="Images\plus_sign.svg" width=7% alt="Plus">
      <!--SKIMAGE-->
-          <img src="skimage_logo.jpeg" width=10% alt="SKImage">
+          <img src="Images\skimage_logo.jpeg" width=10% alt="SKImage">
 
 ## About the Dataset
 
 <p align="center">
     <!--FEATUREEXTRACIONS-->
-      <img src="sample_images.png"  width=90% alt="FeatureExtractions">
+      <img src="Images\sample_images.png"  width=90% alt="FeatureExtractions">
   
 #### This dataset comprises of 25,000 images, each with a resolution of 150x150 pixels, divided into six categories: Buildings, Forest, Glacier, Mountain, Sea, and Street. The data is organized into separate zip files for training, testing, and prediction, with around 14,000 images in the training set, 3,000 in the test set, and 7,000 for prediction. In the training set, each feature has roughly 2,300 examples. In the test set, each feature has 500 examples.
 
@@ -34,7 +34,7 @@
 ### HSV and HOG
 <p align="center">
     <!--FEATUREEXTRACIONS-->
-      <img src="Screenshot 2024-12-20 115900.png"  width=70% alt="FeatureExtractions">
+      <img src="Images\Screenshot 2024-12-20 115900.png"  width=70% alt="FeatureExtractions">
 
 #### At first glance, we take a look at raw images and their corresponding contrast, HSV, and HOG features as seen above. Quickly, we can see distinct differentiators through the HSV and HOG feature vectors, otherwise, not obvious by just looking at the images alone.
 
@@ -50,7 +50,7 @@
 
 <p align="center">
     <!--PCA-->
-      <img src="pca.png"  width=50% alt="PCA">
+      <img src="Images\pca.png"  width=50% alt="PCA">
   
 #### PCA appears to have limited utility for this dataset due to significant overlap between many categories. Urban categories like buildings and streets exhibit substantial overlap, reflecting their shared geometric and structural features, such as edges, lines, and muted tones. Natural categories like forests, mountains, and seas show broader dispersion, indicative of variability in natural textures and patterns. However, glaciers form a tighter cluster, suggesting that their consistent visual features—dominated by brightness and smooth textures—make them easier to separate.
 #### Despite some broad distinctions, overlap persists between natural and urban categories, such as forests and mountains or seas and glaciers. These overlaps reflect shared characteristics like irregular textures, earthy tones, or reflective surfaces, which PCA’s linear nature struggles to distinguish effectively. This emphasizes the need for non-linear dimensionality reduction techniques or advanced feature extraction to better separate nuanced features.
@@ -61,8 +61,10 @@
 
 <p align="center">
     <!--TSNE-->
-      <img src="tsne.png"  width=50% alt="t-SNE">
+      <img src="Images\tsne.png"  width=50% alt="t-SNE">
   
 #### The t-SNE visualization offers a non-linear projection of the dataset, improving on PCA by better preserving local feature structure. While some categories, like forest, form tighter clusters due to their uniform brightness and smooth textures, others, such as buildings and streets, exhibit significant overlap. This overlap reflects shared structural features like edges and linear patterns, particularly within urban categories. Natural categories like forests, mountains, and seas display broader dispersion, with partial clustering for forests and overlap between mountains and glaciers, due to shared natural textures and color tones.
 #### Compared to PCA, t-SNE provides better separation for certain categories, such as glaciers and forests, while still struggling with complex overlaps, particularly between urban and natural scenes. Categories with high variability, such as mountains and seas, remain more dispersed, highlighting the difficulty of isolating scenes with diverse features.
 #### While t-SNE effectively reveals local relationships and achieves partial clustering, significant category overlap underscores the need for advanced feature engineering, such as texture- or context-sensitive methods, to further enhance separability and classification accuracy. This visualization demonstrates t-SNE’s strength in uncovering data structure while emphasizing its limitations for datasets with complex, overlapping features.
+
+##### Source: https://www.kaggle.com/datasets/puneet6060/intel-image-classification
