@@ -53,7 +53,9 @@ Putting it all together, we selected the HSV and HOG features to feed into the m
       <img src="Images\pca.png"  width=50% alt="PCA">
   
 PCA appears to have limited utility for this dataset due to significant overlap between many categories. Urban categories like buildings and streets exhibit substantial overlap, reflecting their shared geometric and structural features, such as edges, lines, and muted tones. Natural categories like forests, mountains, and seas show broader dispersion, indicative of variability in natural textures and patterns. However, glaciers form a tighter cluster, suggesting that their consistent visual features—dominated by brightness and smooth textures—make them easier to separate.
+
 Despite some broad distinctions, overlap persists between natural and urban categories, such as forests and mountains or seas and glaciers. These overlaps reflect shared characteristics like irregular textures, earthy tones, or reflective surfaces, which PCA’s linear nature struggles to distinguish effectively. This emphasizes the need for non-linear dimensionality reduction techniques or advanced feature extraction to better separate nuanced features.
+
 While PCA provides an accessible summary of feature variance and relationships between categories, it highlights the challenges of achieving clear separability in this dataset. Techniques like t-SNE and texture-sensitive feature extraction are essential for improving classification performance and tackling the complexities of scene classification.
 
 
